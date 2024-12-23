@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('https://cdn.photoroom.com/v2/image-cache?path=gs://background-7ef44.appspot.com/backgrounds_v3/christmas/35_-_christmas.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.envelope {
+    width: 200px;
+    height: 150px;
+    background: white;
+    border: 2px solid #e91e63;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+.envelope-cima {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 70%;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.envelope-baixo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150%;
+    height: 70%;
+    background: #fff;
+}
+
+.envelope-coracao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #e91e63;
+}
+
+.cartinha {
+    display: none;
+    background: white;
+    padding: 4rem 6rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: aparecer 0.5s ease-out;
+    max-width: 800px;
+    margin: auto;
+    font-weight: bold;
+}
+
+.cartinha h1 {
+    color: #e91e63;
+    margin: 0;
+}
+
+.cartinha p {
+    color: #333;
+    font-size: 1rem;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
